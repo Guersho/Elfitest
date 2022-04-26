@@ -1,0 +1,238 @@
+*{
+    /* Google font : poppins */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin : 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+#zoneResultats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+}
+.carte{
+    background-color: white;
+    margin : 15px;
+    padding: 15px;
+    width: 250px;
+    height: 350px;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0px 0px 9px -3px rgba(184,184,184,0.75);
+    -webkit-box-shadow: 0px 0px 9px -3px rgba(184,184,184,0.75);
+    -moz-box-shadow: 0px 0px 9px -3px rgba(184,184,184,0.75);
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 140PX;
+    flex-grow: 1;
+}
+.picture > img {
+    display: block;
+    max-width: 240px;
+    height: 140px;
+}
+.title{
+    width: 240px;
+    height: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+.marque{
+    font-size: small;
+}
+.nutriContainer{
+    background-color: white;
+    color: grey;
+    font-weight: bolder;
+    width: 150px;
+    padding: 7px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: lightgray;
+}
+.zoneListeNutri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 15px;
+}
+.nutriRank{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.nutriRank>li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* width: 20px; */
+    height: 30px;
+    padding-inline: 5px;
+}
+.nutriRank>li:nth-child(1){
+    background-color: #008b50;
+    border-radius: 15px 0px 0px 15px;
+ }
+ .nutriRank>li:nth-child(2){
+    background-color: #a6c858;
+ }
+ .nutriRank>li:nth-child(3){
+    background-color: #fed501;
+ }
+ .nutriRank>li:nth-child(4){
+    background-color: #f28d01;
+ }
+ .nutriRank>li:nth-child(5){
+    background-color: #e63614;
+    border-radius: 0px 15px 15px 0px;
+ }
+ .On{
+    font-size: x-large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+ }
+ .selectorContainer{
+     height: 25px;
+     width: 150px;
+     display: flex;
+     align-self: center;
+     justify-self: center;
+     justify-content: space-between;
+
+ }
+ .ajouterBtn,.retirerBtn{
+     width: 25px;
+     font-weight: bolder;
+     color: white;
+     border-style: none;
+ }
+ .ajouterBtn{
+     background-color: #a6c858;
+ }
+ .retirerBtn{
+     background-color: #e63614;
+ }
+ input{
+     width: 40px;
+ }
+ .ajouterBtn:hover{
+     cursor: pointer;
+ }
+ .retirerBtn:hover{
+    cursor: pointer;
+}
+nav{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+#navigation{
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+    width : 250px;
+}
+#chercherP{
+    width: 200px;
+    border-style: none;
+}
+#searchBar{
+    margin-bottom: 15px;
+    padding: 5px 25px 5px 25px;
+    width: 275px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 9px -3px rgba(74, 74, 74, 0.75);
+    -webkit-box-shadow: 0px 0px 9px -3px rgba(74, 74, 74, 0.75);
+    -moz-box-shadow: 0px 0px 9px -3px rgba(74, 74, 74, 0.75);
+    background-color: white;
+}
+#searchBar:hover{
+    box-shadow: 0px 0px 9px -3px #a6c858;
+    -webkit-box-shadow: 0px 0px 9px -3px #a6c858;
+    -moz-box-shadow: 0px 0px 9px -3px #a6c858;
+}
+#searchBar>button{
+    border-style: none;
+    color : gray;
+    font-weight: bolder;
+    cursor:pointer;
+    background-color: white;
+}
+#navigation>button{
+    width: 50px;
+    height: 25px;
+}
+#imgPanier{
+    width: 300px;
+    height: 300px;
+}
+
+
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(image/banniere.jpg);
+    height: 450px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+#infoRes{
+    text-align: center;
+}
+#slogan{
+    font-size: 1em;
+    flex-basis:25% ;
+    }
+    #slogan em{
+    color: #F4A261;
+    font-size: 1.2em;
+    }
+    #slogan strong{
+    color: #2A9D8F;
+    font-size: 1.2em;
+    }
+#vide{
+        width: 25%;
+        height: 30px;
+    }
+#logo_searchBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+
+
+
+
+

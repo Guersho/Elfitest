@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>inscription - ELFI</title>
+    <link rel="stylesheet" href="styleFormulaire.css">
+    <script src="script_js/popUp.js" defer ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <section id= "connexion">
+      <div id="container">
+        <button id="fermer" onclick="FermerPopUp()">x</button>  
+        <form id="form_connexion" method= "post" action="confirmationinscription.php">
+          <h1>Inscription </h1>
+          
+          <p><span>Adresse e-mail:</span> <input id="AdE" name="email" type="email" required ></input></p>
+
+          <p><span>Nom:</span> <input id="nomE" name="nomE" type="text" required ></input></p>
+          
+          <p><span>Prénom:</span> <input id="prenomE" name="prenomE" type="text" required ></input></p>     
+
+          <p><span>Mot de passe: </span> <input class="formInput" id="pwd" name="pwd" type="password" required ></input></p>
+    
+
+          <p><span>Date de naissance:</span> <input class="formInput" id="dateE" name="dateE" type="Date" required ></input></p>
+
+          <p><span>Adresse:</span> <input class="formInput" id="AdresseE" name="AdresseE" type="text"></input></p>  
+
+          <p><span>Taille en m:</span> <input class="formInput" id="tailleE" name="tailleE" type="number" step="any"></input></p>  
+
+          <p><span>Poids en kg:</span> <input class="formInput" id="poidsE" name="poidsE" type="number" step="any"></input></p>
+
+          <p><span>Sexe:</span> <select class="formInput" id="sexeE" name="sexeE"> 
+                                        <option>M.</option>
+                                        <option>Mme</option>
+                                </select></p>
+
+          
+
+          
+            <input type="checkbox" name="verification" id="recevoir" checked /> 
+            <label class="optionnel">J'accepte de recevoir des newsletter</label>
+          
+                
+          <div class="div_checkBox">
+            <input type="checkbox" name="verification" id="condition" required /> 
+            <label class="optionnel">J'accepte les condition général d'utilisation</label>
+          </div>
+
+          <div class="div_checkBox">
+            <input class = "lienFormConnexion" type="submit" name="envoyer" id="envoyer" value="Envoyer" onclick="return confirm('etes vous sûr de continuer?')" />
+            <input class = "lienFormConnexion" type="reset" name="effacer" id="effacer" value="Effacer" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

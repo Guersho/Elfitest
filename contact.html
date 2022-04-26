@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Contact</title>
+    
+   <link id="pageStyle" rel="stylesheet" href="homeStyle.css">
+    <script src="homeScript.js" defer></script>
+    <script src="script_js/scrollBackBtn.js" defer></script>
+    <script src="script_js/popUp.js" defer></script>
+    <!-- Script pour la fonction recherche -->
+    <script src="API/proto.js" defer></script>
+    <!-- Google font : poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Import Icon Goolge -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="icone/LogoElfi.ico">
+    <title>Accueil Elfi</title>
+    <script src="script_js/test.js" defer ></script>
+  </head>
+
+
+  <body>
+  
+      <!-- <iframe class="inscriptionPopUp" src= "inscription.html">
+        </iframe> -->
+    <div id="popUp_place">
+
+    </div>
+
+     <header>
+        <!-- SLOGAN -->
+        <div id="slogan">
+            <h1>Mangez <em>mieux.</em> <br> Mangez <strong>Sainement</strong></h1>
+        </div>
+
+
+        <div id="logo_searchBar">
+            <!-- logo -->
+            <a href="index.html" alt="logo de Elfi">
+                <img id="mainLogo" src="image/logo.png" alt="description logo">
+            </a>
+
+
+            <!-- Barre de recherche -->
+            <form class="searchForm">
+                <input id="searchObject" class="searchBar" type="text" placeholder=" Rechercher . . .">
+                <!-- appel du script searchFct.js -->
+                <button id="lancerRecherche" class="searchButton" type="button">
+                    <span class="material-icons">
+                        search
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Bouton d'inscription -->
+        <div class="signUp">
+            <button onclick="AfficherPopUP()">
+                Log In
+            </button>
+        </div>
+    </header>
+
+    <hr>
+
+    <nav id="mainNav">
+        <!-- Menu information -->
+        <div class="box">
+            <div id="information" class="menuItem">
+                <span class="material-icons">
+                    feed
+                </span>
+                <h2>
+                    <a class="lien" href="information.html">Information</a>
+                </h2>
+                <p class="description">
+                    Voici une petite description de la page Information
+                </p>
+            </div>
+        </div>
+
+        <!-- Menu Contact -->
+        <div class="box">
+            <div id="contact" class="menuItem">
+                <span class="material-icons">
+                    contact_phone
+                </span>
+                <h2>
+                    <a class="lien" href="contact.html">Contact</a>
+                </h2>
+                <p class="description">
+                    Voici une petite description de la page Contact
+                </p>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Début Partie Recherche -->
+    <div id="headSearch">
+        <h3>Résultats de la recherche</h3>
+        <p id="nbRes"></p>
+    </div>
+
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-8">
+          <div class="form h-100">
+            <h3>Nous envoyer un message</h3>
+            <form class="mb-5" method="post" id="contactForm" name="contactForm">
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Nom et prénom *</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Marie Lacroix">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Email *</label>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="xxx@xmail.com">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Phone</label>
+                  <input type="text" class="form-control" name="phone" id="phone"  placeholder="Phone #">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Société</label>
+                  <input type="text" class="form-control" name="company" id="company"  placeholder="Nom société">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group mb-5">
+                  <label for="message" class="col-form-label">Message *</label>
+                  <textarea class="form-control" name="message" id="message" cols="30" rows="4"  placeholder="écrire votre message"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="submit" value="Envoyez" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            <div id="form-message-warning mt-4"></div> 
+            <div id="form-message-success">
+              Votre message a été envoyée, merci!
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info h-100">
+            <h3>Contact Information</h3>
+            <p class="mb-5">Les liens contact de notre équipe est le suivant!</p>
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <span class="wrap-icon icon-envelope mr-3"></span>
+                <span class="text">yijie.yu@ut-capitole.fr</span>
+              </li>
+              <li class="d-flex">
+                <span class="wrap-icon icon-envelope mr-3"></span>
+                <span class="text">Elias@ut-capitole.fr</span>
+              </li>
+              <li class="d-flex">
+                <span class="wrap-icon icon-envelope mr-3"></span>
+                <span class="text">Andy@ut-capitole.fr</span>
+              </li>
+              <li class="d-flex">
+                <span class="wrap-icon icon-envelope mr-3"></span>
+                <span class="text">Delphine@ut-capitole.fr</span>
+              </li>
+              <li class="d-flex">
+                <span class="wrap-icon icon-envelope mr-3"></span>
+                <span class="text">Guershom@ut-capitole.fr</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+  <footer>
+        <!-- Menu rapide -->
+        <div class="footer_section">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+               
+                <li>
+                    <a href="information.html">Information</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Formations -->
+        <div class="footer_section">
+            <h3>Formation</h3>
+            <ul>
+                <li>
+                    <a href="https://www.ut-capitole.fr/" target="_blank">Université Toulouse 1 Capitole</a>
+                </li>
+                <li>
+                    <a href="https://www.ut-capitole.fr/formations/nos-diplomes/masters/master-1ere-annee-mention-miage-parcours-type-ingenierie-metier-im--310746.kjsp?RH=1319186557727"
+                        target="_blank">Master Miage - Ingénierie Métier</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Ressources -->
+        <div class="footer_section">
+            <h3>Ressources</h3>
+            <ul>
+                <li>
+                    <a href="https://fr.openfoodfacts.org/" target="_blank">Open Food Facts</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">Tesseract-ocr</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+  </body>
+</html>

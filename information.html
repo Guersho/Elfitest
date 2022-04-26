@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link id="pageStyle" rel="stylesheet" href="StyleInformation.css">
+    <script src="homeScript.js" defer></script>
+    <script src="script_js/scrollBackBtn.js" defer></script>
+    <script src="script_js/popUp.js" defer></script>
+    <!-- Script pour la fonction recherche -->
+    <script src="API/proto.js" defer></script>
+    <!-- Google font : poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Import Icon Goolge -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="icone/LogoElfi.ico">
+    <title>Accueil Elfi</title>
+</head>
+
+<body>
+    <!-- <iframe class="inscriptionPopUp" src= "inscription.html">
+        </iframe> -->
+    <div id="popUp_place">
+
+    </div>
+
+     <header>
+        <!-- SLOGAN -->
+        <div id="slogan">
+            <h1>Mangez <em>mieux.</em> <br> Mangez <strong>Sainement</strong></h1>
+        </div>
+
+
+        <div id="logo_searchBar">
+            <!-- logo -->
+            <a href="index.html" alt="logo de Elfi">
+                <img id="mainLogo" src="image/logo.png" alt="description logo">
+            </a>
+
+
+            <!-- Barre de recherche -->
+            <form class="searchForm">
+                <input id="searchObject" class="searchBar" type="text" placeholder=" Rechercher . . .">
+                <!-- appel du script searchFct.js -->
+                <button id="lancerRecherche" class="searchButton" type="button">
+                    <span class="material-icons">
+                        search
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Bouton d'inscription -->
+        <div class="signUp">
+            <button onclick="AfficherPopUP()">
+                Log In
+            </button>
+        </div>
+    </header>
+
+    <hr>
+
+    <nav id="mainNav">
+        <!-- Menu information -->
+        <div class="box">
+            <div id="information" class="menuItem">
+                <span class="material-icons">
+                    feed
+                </span>
+                <h2>
+                    <a class="lien" href="information.html">Information</a>
+                </h2>
+                <p class="description">
+                    Voici une petite description de la page Information
+                </p>
+            </div>
+        </div>
+
+        <!-- Menu Contact -->
+        <div class="box">
+            <div id="contact" class="menuItem">
+                <span class="material-icons">
+                    contact_phone
+                </span>
+                <h2>
+                    <a class="lien" href="contact.html">Contact</a>
+                </h2>
+                <p class="description">
+                    Voici une petite description de la page Contact
+                </p>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Début Partie Recherche -->
+    <div id="headSearch">
+        <h3>Résultats de la recherche</h3>
+        <p id="nbRes"></p>
+    </div>
+				<div id="main">
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Le chocolat est-il aussi bon pour la santé que pour le palais ?
+							</h2><img class="left" src="image/pic2.jpg" width="100" height="100" alt="" />
+							<p>
+								La fève de cacao, issue du cacaoyer (famille des Sterculiacées), existait déjà 4000 ans avant J.-C. dans certaines zones tropicales 
+								d’Amérique du Sud, notamment dans les bassins de l’Amazonie et de l’Orénoque. Cet arbre porte jusqu’à 500 fleurs par an, 
+								mais seules 1 à 2 % d’entre elles donneront le fruit : 
+								la cabosse. De la forme d’un ballon de rugby, elle renferme 30 à 50 graines baignant dans un mucilage et qui 
+								deviendront, après une préparation adéquate, les fameuses fèves de cacao. 
+								Il faut environ 20 kg de cabosses fraîches pour obtenir 1 kg de fèves séchées et un cacaoyer en produit environ 500 g à 2 kg par an.
+							</p>
+	</div>
+				<div id="box2">
+							<h3>
+								Se motiver à faire du sport! 
+							</h3>
+							<p>
+								Entre bonnes résolutions sportives, rentrée, challenge personnel, trouver une bonne raison de se mettre au sport n'est pas compliqué. 
+								Mais une fois cette raison trouvée, faut-il encore se motiver réellement et ne pas retomber dans sa routine quotidienne où tout est plus tentant qu’aller courir sous la pluie. 
+								Et c'est une fois qu'on s'y est mis que le plus dur peut arriver : garder la motivation pour faire du sport...
+								On vous comprend, alors on a décidé de vous aider avec ce dossier tout spécialement conçu pour vous aider à rester motivé·e.
+							</p>
+							<ul class="linkedList">
+								<li class="first">
+									<a href="https://www.blog-sport.fr/quelles-sont-les-bonnes-pratiques-a-respecter-dans-une-salle-de-musculation/">Quelles sont les bonnes pratiques à respecter dans une salle de musculation ?</a>
+								</li>
+								<li>
+									<a href="https://www.blog-sport.fr/comment-ameliorer-ses-capacites-physiques/">Comment améliorer ses capacités physiques ?</a>
+								</li>
+								<li>
+									<a href="https://www.blog-sport.fr/quels-sont-les-meilleurs-exercices-pour-prendre-des-bras/">Quels sont les meilleurs exercices pour prendre des bras ?</a>
+								</li>
+								<li class="last">
+									<a href="https://www.blog-sport.fr/comment-prendre-de-la-masse-rapidement/">Comment prendre de la masse rapidement ?</a>
+								</li>
+							</ul>
+				</div>
+					<div id="box3">
+							<h3>
+								Sports bien-être?
+							</h3>
+							<p>
+								Vous recherchez la sérénité, le plaisir de bouger dans un corps détendu et fort ? Découvrez nos conseils pour vous initier à 
+								la marche et au jogging pour un nouveau souffle. Et nos conseils pour vous lancer dans la pratique du yoga et du 
+								Pilates pour vous recentrer et prendre conscience de l'ensemble de votre corps. Des sports bien être où le corps 
+								retrouve toute sa souplesse et l'esprit toute sa vivacité !
+							</p>
+					</div>
+						<br class="clear" />
+					</div>
+				<div id="sidebar1">
+						<h3>
+							Elfi vous accompagne!
+						</h3>
+						<p>
+							Elfi vous accompagne quotidiennement pour vous aider dans la nutrition et comment manger sainement.
+						</p>
+
+						<ul class="linkedList">
+							<li class="first">
+								<a href="https://www.sante-et-nutrition.com/le-chocolat-est-il-aussi-bon-pour-la-sante-que-pour-le-palais/">Le chocolat est-il aussi bon pour la santé que pour le palais ?</a>
+							</li>
+
+							<li>
+								<a href="https://www.sante-et-nutrition.com/ail-benefices-sante/">L’ail, un aliment aux nombreux bénéfices sur la santé</a>
+							</li>
+							<li class="last">
+								<a href="https://www.sante-et-nutrition.com/complementarite-physiotherapie-et-nutrition/">Complémentarité Physiothérapie-Nutrition, un exemple d’approche holistique</a>
+							</li>
+						</ul>
+
+						<h3>
+							Les recettes
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="https://www.cuisineactuelle.fr/recettes/saumon-surgele-en-papillote-307778">Saumon surgelé en papillote</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/carpaccio-de-tomates-265281">Carpaccio de tomates</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/salade-chou-rave-pomme-chevre-et-noix-322398">Salade chou-rave, pomme chèvre et noix</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/wraps-au-saumon-fume-273742">Wraps au saumon fumé</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/quinoa-blanc-320710">Quinoa blanc</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/smoothie-aux-fruits-rouges-et-graines-de-chia-315889">Smoothie aux fruits rouges et graines de chia</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/tian-aux-herbes-de-provence-263357">Tian aux herbes de Provence</a>
+							</li>
+							<li>
+								<a href="https://www.cuisineactuelle.fr/recettes/salade-grecque-197751">Salade grecque</a>
+							</li>
+							<li class="last">
+								<a href="https://www.cuisineactuelle.fr/recettes/salade-d-epinards-nems-croquants-204091">Salade d'épinards, nems croquants</a>
+							</li>
+						</ul>
+				</div>
+					<div id="sidebar2">
+						<h3>
+							Blog de sport
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<a href="https://www.blog-sport.fr/comment-choisir-son-sport-collectif/">Comment choisir son sport collectif ?</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/watch?v=VddSvgcmBz0">45 MIN BOOTY, ABS + FAT BURN</a>
+							</li>
+							<li>
+								<a href="https://conseilsport.decathlon.fr/integrer-le-sport-dans-votre-quotidien-nos-meilleurs-conseils">Sport et quotidien</a>
+							</li>
+							<li>
+								<a href="https://conseilsport.decathlon.fr/sport-et-alimentation-tous-nos-conseils">Sports et nutrition</a>
+							</li>
+							<li>
+								<a href="https://conseilsport.decathlon.fr/dossier-quels-sports-pour-prendre-soin-de-moi-a-la-maison">Se détendre avec le sport</a>
+							</li>
+							<li>
+								<a href="https://conseilsport.decathlon.fr/nos-conseils-sports-bien-etre">Sports bien-être</a>
+							</li>
+							<li class="last">
+								<a href="https://conseilsport.decathlon.fr/dossier-se-motiver-et-rester-motive-e">Se motiver à faire du sport!</a>
+							</li>
+						</ul>
+
+
+					</div>
+
+				</div>
+
+				
+    <footer>
+        <!-- Menu rapide -->
+        <div class="footer_section">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+               
+                <li>
+                    <a href="information.html">Information</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Formations -->
+        <div class="footer_section">
+            <h3>Formation</h3>
+            <ul>
+                <li>
+                    <a href="https://www.ut-capitole.fr/" target="_blank">Université Toulouse 1 Capitole</a>
+                </li>
+                <li>
+                    <a href="https://www.ut-capitole.fr/formations/nos-diplomes/masters/master-1ere-annee-mention-miage-parcours-type-ingenierie-metier-im--310746.kjsp?RH=1319186557727"
+                        target="_blank">Master Miage - Ingénierie Métier</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Ressources -->
+        <div class="footer_section">
+            <h3>Ressources</h3>
+            <ul>
+                <li>
+                    <a href="https://fr.openfoodfacts.org/" target="_blank">Open Food Facts</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">Tesseract-ocr</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

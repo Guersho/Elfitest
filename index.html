@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link id="pageStyle" rel="stylesheet" href="homeStyle.css">
+    <script src="homeScript.js" defer></script>
+    <script src="script_js/scrollBackBtn.js" defer></script>
+    <script src="script_js/popUp.js" defer></script>
+    <!-- Script pour la fonction recherche -->
+    <script src="API/proto.js" defer></script>
+    <!-- Google font : poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Import Icon Goolge -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="icone/LogoElfi.ico">
+    <title>Accueil Elfi</title>
+</head>
+
+<body>
+    <!-- <iframe class="inscriptionPopUp" src= "inscription.html">
+        </iframe> -->
+    <div id="popUp_place">
+
+    </div>
+
+    <header>
+        <!-- SLOGAN -->
+        <div id="slogan">
+            <h1>Mangez <em>mieux.</em> <br> Mangez <strong>Sainement</strong></h1>
+        </div>
+
+
+        <div id="logo_searchBar">
+            <!-- logo -->
+            <a href="index.html" alt="logo de Elfi">
+                <img id="mainLogo" src="image/logo.png" alt="description logo">
+            </a>
+            <!-- Barre de recherche -->
+            <form class="searchForm">
+                <input id="searchObject" class="searchBar" type="text" placeholder=" Rechercher . . .">
+                <!-- appel du script searchFct.js -->
+                <button id="lancerRecherche" class="searchButton" type="button">
+                    <span class="material-icons">
+                        search
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Bouton d'inscription -->
+        <div class="signUp">
+            <button onclick="AfficherPopUP()">
+                Log In
+            </button>
+        </div>
+    </header>
+
+    <hr>
+
+    <nav id="mainNav">
+        <!-- Menu information -->
+        <div class="box">
+            <div id="information" class="menuItem">
+                <span class="material-icons">
+                    feed
+                </span>
+                <h2>
+                    <a class="lien" href="information.html">Information</a>
+                </h2>
+                <p class="description">
+                    Voici une petite description de la page Information
+                </p>
+            </div>
+        </div>
+
+        <!-- Menu Contact -->
+        <div class="box">
+            <div id="contact" class="menuItem">
+                <span class="material-icons">
+                    contact_phone
+                </span>
+                <h2>
+                    <a class="lien" href="contact.html">Contact</a>
+                </h2>
+                <p class="description">
+                    Voici une petite description de la page Contact
+                </p>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Début Partie Recherche -->
+    <div id="headSearch">
+        <h3>Résultats de la recherche</h3>
+        <p id="nbRes"></p>
+    </div>
+    <!-- Fin Partie Recherche -->
+
+    <main id="main" class="searchMain">
+        <div id="intro">
+            <p>Dans le cadre du Master 1 MIAGE IM, il nous a été demandé de réaliser un projet intégratif pour acquérir
+                une connaissance dans différentes matières liées à la transformation numérique.</p>
+        </div>
+
+        <div id="projet" class="zone">
+            <div class="article">
+                <h2>Le Projet</h2>
+                <p>
+                    Notre entreprise, ELFI, a décidé de fournir aux clients un site web/app permettant d'inventer des
+                    recettes saines en fonction des aliments, de leurs âges, ou de leurs IMC, et de répondre aux besoins
+                    quotidiens de nos utilisateurs en matière de santé. Ainsi qu'un scanneur permettant de scanner les
+                    tickets de caisse pour enregistrer les produits disponibles chez vous.
+                </p>
+                <p>
+                    Dans l'entreprise, nous avons lancé des sections clés telles que "Recettes", "Information", pour
+                    populariser les connaissances en matière de santé et de fitness, partager les recettes entre les
+                    utilisateurs, améliorer la santé physique et la qualité de vie, et rendre tout le monde sain et
+                    fort.
+                </p>
+
+            </div>
+            <div class="illustration"></div>
+        </div>
+
+        <div id="enjeux" class="zone">
+            <div class="illustration"></div>
+            <div class="article">
+                <h2>Les enjeux</h2>
+                <p>
+                    Selon la FAO, depuis la dernière décennie, la malnutrition connaît une hausse avec notamment en
+                    2016, 38 millions de malnutris en plus.
+                    Les conséquences de ce mal sont nombreuses : anémie chez la femme en âge de procréer, retard de
+                    croissance chez l’enfant ou encore surpoids chez l’adulte.
+                </p>
+                <p>
+                    C’est pourquoi notre groupe a décidé de lutter à son échelle et avec ses propres moyens contre la
+                    malnutrition. Pour ce faire nous avons pris l’initiative de mettre en place un site web préventif,
+                    ELFI contre la malnutrition en mettant à la disposition des utilisateurs différentes rubriques
+                    apportant différentes informations quant au sujet abordé. Par exemple une rubrique définissant plus
+                    précisément les risques de la malnutrition, les mesures prises à l’échelle mondiale afin de lutter
+                    contre ce fléau, l’importance de se nourrir correctement et comment se nourrir correctement.
+                </p>
+                <p>
+                    Pour ce projet nous comptons aussi mettre en place une application pour les ménages. Cette
+                    application permettrait de pouvoir établir un inventaire des denrées alimentaires se trouvant
+                    présentes dans le ménage par le scan d’un ticket de caisse.
+                </p>
+            </div>
+        </div>
+
+        <div id="equipe" class="zone">
+            <div class="article">
+                <h2>Notre équipe</h2>
+                <p>
+                    Notre équipe est composée de :
+                </p>
+                <ul>
+                    <li class="grosPuce">
+                        Développeur du site web :
+                        <ul>
+                            <li class="miniPuce">Andy Brian WONG KOH HENG</li>
+                            <li class="miniPuce">Delphine KODONDI</li>
+                        </ul>
+                    </li>
+                    <li class="grosPuce">
+                        Développeur de la base de donnée :
+                        <ul>
+                            <li class="miniPuce">Eliass DJEBBOUR</li>
+                            <li class="miniPuce">Guershom GASSIHOUN</li>
+                            <li class="miniPuce">Yijie YU</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="illustration"></div>
+        </div>
+        <!-- La partie en dessous sert à afficher les résultats d'une recherche -->
+    </main>
+
+    <!-- Début Partie Recherche -->
+    <nav id="footSearch">
+        <button id="precedent123" type="button">Précédent</button>
+        <ul id="numPage">
+            <li class="numPage">
+                <a href="#">1</a>
+            </li>
+            <li class="numPage">
+                <a id="bigtest" href="#">2</a>
+            </li>
+            <li class="numPage">
+                ...
+            </li>
+            <li class="numPage">
+                <a href="#">undefined</a>
+            </li>
+            <li class="numPage">
+                <a href="#">undefined</a>
+            </li>
+        </ul>
+        <button id="suivant" type="button">Suivant</button>
+    </nav>
+    <!-- Fin Partie Recherche -->
+
+    <button onclick="topFunction()" id="up" title="Go to top">
+        <span class="material-icons">
+            arrow_upward
+        </span>
+    </button>
+
+    <footer>
+        <!-- Menu rapide -->
+        <div class="footer_section">
+            <h3>Navigation</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="information.html">Information</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Formations -->
+        <div class="footer_section">
+            <h3>Formation</h3>
+            <ul>
+                <li>
+                    <a href="https://www.ut-capitole.fr/" target="_blank">Université Toulouse 1 Capitole</a>
+                </li>
+                <li>
+                    <a href="https://www.ut-capitole.fr/formations/nos-diplomes/masters/master-1ere-annee-mention-miage-parcours-type-ingenierie-metier-im--310746.kjsp?RH=1319186557727"
+                        target="_blank">Master Miage - Ingénierie Métier</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Ressources -->
+        <div class="footer_section">
+            <h3>Ressources</h3>
+            <ul>
+                <li>
+                    <a href="https://fr.openfoodfacts.org/" target="_blank">Open Food Facts</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tesseract-ocr/tesseract" target="_blank">Tesseract-ocr</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
