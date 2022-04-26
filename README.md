@@ -18,8 +18,8 @@ Pour ce projet nous comptons aussi mettre en place une application pour les mén
 **Développeur du site web :**
 - Andy Brian WONG KOH HENG
 - Delphine KODONDI
-
+- Guershom Yao GASSIHOUN
 **Développeur de la base de donnée :**
 - Eliass DJEBBOUR
-- Guershom GASSIHOUN
+- Guershom Yao GASSIHOUN
 - Yijie YU
